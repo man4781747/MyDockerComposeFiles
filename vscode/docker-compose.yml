@@ -1,0 +1,21 @@
+version: "2.1"
+services:
+  code-server:
+    image: codercom/code-server:latest
+    container_name: code-server
+    user: root
+    environment:
+      - PASSWORD=password #optional
+      - HASHED_PASSWORD= #optional
+      - SUDO_PASSWORD=password #optional
+      - SUDO_PASSWORD_HASH= #optional
+    volumes:
+      - ~/.config:/config
+      - /home/man4781747/project:/home/coder/project
+    ports:
+      - 8080:8080
+      - 9000:9000
+      - 9001:9001
+      - 9002:9002
+      - 7788:7788 
+    restart: unless-stopped
