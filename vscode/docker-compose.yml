@@ -11,7 +11,7 @@ services:
       - SUDO_PASSWORD_HASH= #optional
     volumes:
       - ~/.config:/config
-      - /home/man4781747/project:/home/coder/project
+      - ~:/home/coder/project
     ports:
       - 8080:8080
       - 9000:9000
