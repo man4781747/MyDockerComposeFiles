@@ -1,0 +1,1 @@
+docker build -t ts-flask-image:latest . --no-cache
